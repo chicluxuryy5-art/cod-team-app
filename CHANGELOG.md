@@ -15,7 +15,8 @@ Historique des versions livrées. Les dates correspondent aux commits du dépôt
 - Test réel d'inscription : rôle forcé `confirmatrice` ; interface limitée aux modules autorisés ; auto-promotion admin neutralisée par trigger.
 - Test d'isolation RLS : `comp_runs` en lecture = 0 ligne, écriture = 403 ; `products` = 403 ; `settings` inchangé ; `orders` création et mise à jour = 201/200.
 - Documentation actualisée : `README.md`, `DEPLOIEMENT_GITHUB.md`, `RECOVERY_SUPABASE.md`, `CHANGELOG.md`.
-- Reste à faire : fusion du fork dans `mrchiealgerie-hub/cod-team-app`, création des comptes réels, changement du mot de passe de test.
+- Pull request **#1** ouverte du fork vers le dépôt canonique : <https://github.com/mrchiealgerie-hub/cod-team-app/pull/1> (aucun conflit, fusion à valider par le propriétaire).
+- Reste à faire : fusion de la PR #1, création des comptes réels, changement du mot de passe de test.
 
 ## 15 novembre 2026 — Protocole de test Twenty Cloud
 
