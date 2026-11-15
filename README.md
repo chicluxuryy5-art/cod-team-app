@@ -19,7 +19,7 @@ Application web interne pour piloter une opération e-commerce en paiement à la
 
 > Le mot de passe du compte de test n'est pas stocké dans cette archive. Il a été communiqué séparément. **Changez-le avant tout usage réel.**
 
-> Le site public actuel est servi depuis le fork `chicluxuryy5-art/cod-team-app`, car le compte GitHub disponible n'a pas le droit d'écriture sur le dépôt canonique. La procédure de fusion est décrite dans `DEPLOIEMENT_GITHUB.md`.
+> Le site public actuel est servi depuis le fork `chicluxuryy5-art/cod-team-app`, car le compte GitHub disponible n'a pas le droit d'écriture sur le dépôt canonique. La pull request **#1** est ouverte et sans conflit : le propriétaire doit la fusionner. Procédure dans `DEPLOIEMENT_GITHUB.md`.
 
 ---
 
