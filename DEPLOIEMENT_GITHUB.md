@@ -17,11 +17,11 @@ Le site public sert bien la version rebranchée sur le nouveau projet Supabase :
 
 Le compte GitHub utilisé sur ce poste (`chicluxuryy5-art`) n'a pas le droit d'écriture sur le dépôt `mrchiealgerie-hub/cod-team-app` : la page de téléversement répond « Uploads are disabled. File uploads require push access to this repository. » Le fork permet une mise en ligne immédiate sans attendre la fusion.
 
-Le dépôt canonique reste la cible finale. Deux voies pour aligner :
+Le dépôt canonique reste la cible finale. Une **pull request #1** est déjà ouverte depuis le fork : <https://github.com/mrchiealgerie-hub/cod-team-app/pull/1> — « No conflicts with base branch ». Le propriétaire n'a plus qu'à cliquer **Merge pull request**.
 
-1. **Fusion du fork** — le propriétaire ouvre une comparaison :
-   <https://github.com/mrchiealgerie-hub/cod-team-app/compare/main...chicluxuryy5-art:cod-team-app:main>
-   puis **Create pull request** → **Merge pull request**.
+Deux voies pour aligner :
+
+1. **Fusion de la PR #1** — le propriétaire ouvre <https://github.com/mrchiealgerie-hub/cod-team-app/pull/1> puis **Merge pull request** → **Confirm merge**.
 2. **Invitation en Write** — <https://github.com/mrchiealgerie-hub/cod-team-app/settings/access> → **Add people** → `chicluxuryy5-art` → rôle **Write**. Le fork pourra alors être poussé directement sur le dépôt canonique.
 
 Après fusion, GitHub Pages peut être activé sur le dépôt canonique (**Settings → Pages → Deploy from a branch → main / (root)**). Il faut alors mettre à jour l'URL autorisée dans Supabase Auth (voir `RECOVERY_SUPABASE.md`).
