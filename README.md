@@ -1,6 +1,6 @@
 # COD Team — CRM & Ops pour e-commerce COD (Algérie)
 
-**Version 15** — archive consolidée du 14 novembre 2026.
+**Version 15** — archive consolidée du 15 novembre 2026.
 
 Application web interne pour piloter une opération e-commerce en paiement à la livraison (COD) : pipeline produit, sourcing ateliers, tests publicitaires, production, commandes et confirmation, stock, finances, WhatsApp et gestion du temps.
 
@@ -10,13 +10,16 @@ Application web interne pour piloter une opération e-commerce en paiement à la
 
 | Élément | Valeur |
 |---|---|
-| Application en ligne | https://mrchiealgerie-hub.github.io/cod-team-app/ |
-| Dépôt GitHub | https://github.com/mrchiealgerie-hub/cod-team-app |
-| Projet Supabase | `sfsnyppydvhvnjiqjgjt` |
-| URL Supabase | `https://sfsnyppydvhvnjiqjgjt.supabase.co` |
+| Application en ligne | https://chicluxuryy5-art.github.io/cod-team-app/ |
+| Dépôt publié (fork) | https://github.com/chicluxuryy5-art/cod-team-app |
+| Dépôt canonique | https://github.com/mrchiealgerie-hub/cod-team-app (à fusionner) |
+| Projet Supabase | `pqnauwlwyrqftgywgoxi` |
+| URL Supabase | `https://pqnauwlwyrqftgywgoxi.supabase.co` |
 | Compte admin de test | `test.admin@codteam.dz` |
 
 > Le mot de passe du compte de test n'est pas stocké dans cette archive. Il a été communiqué séparément. **Changez-le avant tout usage réel.**
+
+> Le site public actuel est servi depuis le fork `chicluxuryy5-art/cod-team-app`, car le compte GitHub disponible n'a pas le droit d'écriture sur le dépôt canonique. La procédure de fusion est décrite dans `DEPLOIEMENT_GITHUB.md`.
 
 ---
 
@@ -110,7 +113,7 @@ Le fichier `index.html` doit rester à la racine du dépôt, accompagné de `.no
 
 L'application peut aussi être hébergée sur n'importe quel hébergeur statique (Netlify, Cloudflare Pages, Vercel…).
 
-> L'état exact du déploiement au 14 novembre 2026 et les procédures de push (y compris le blocage de permission GitHub) sont documentés dans `DEPLOIEMENT_GITHUB.md`.
+> L'état exact du déploiement au 15 novembre 2026, le fork et la procédure de fusion sont documentés dans `DEPLOIEMENT_GITHUB.md`.
 
 ### 4. Configuration
 
@@ -178,7 +181,7 @@ Twenty est testé comme **CRM commercial complémentaire**, pas comme remplaceme
 
 ## Données et sécurité
 
-- Les données de démonstration sont fictives : produits, commandes « Demo SLA », campagne WhatsApp de test, conversation Karim Bouzid, entrées de temps.
+- Les données de démonstration sont fictives ou absentes : la base actuelle ne contient que le compte admin de test, aucun produit ni commande.
 - Les données réelles vivent dans Supabase, pas dans le dépôt Git.
 - La clé `anon` du front est publique ; les politiques RLS limitent les lectures et écritures selon le rôle.
 - Les exports CSV/PDF peuvent contenir des données personnelles : ne pas les committer.
@@ -201,10 +204,10 @@ Twenty est testé comme **CRM commercial complémentaire**, pas comme remplaceme
 ## Limites connues
 
 - **Migrations** : exécuter `bootstrap_full.sql` sur un projet neuf, ou `v5` → `v12` sur une base existante. Sans ces scripts, les modules Stock, Wilayas, Tests A/B, WhatsApp, Temps et Compensation restent partiellement inactifs.
-- **Projet Supabase** : au 14 novembre 2026, le projet `sfsnyppydvhvnjiqjgjt` est injoignable (NXDOMAIN, probablement en pause). Voir `RECOVERY_SUPABASE.md` avant toute utilisation.
+- **Projet Supabase** : le projet actif est `pqnauwlwyrqftgywgoxi` (statut `ACTIVE_HEALTHY` au 15 novembre 2026). L'ancien projet `sfsnyppydvhvnjiqjgjt` est abandonné. Voir `RECOVERY_SUPABASE.md` pour l'exploitation et la reprise.
+- **Dépôt canonique** : le site public est servi depuis le fork ; la fusion dans `mrchiealgerie-hub/cod-team-app` reste à faire par le propriétaire.
 - **WhatsApp** : l'envoi manuel `wa.me` est la voie officielle et sûre. Le relais Baileys est **non officiel** et peut entraîner une suspension du numéro ; à utiliser avec un numéro dédié.
 - **IA WhatsApp** : les suggestions aident l'agent, mais l'envoi reste une action humaine.
-- **Données de démo** : à nettoyer avant la mise en production si vous voulez des tableaux de bord vierges.
 - **PDF** : la qualité dépend du navigateur et de la bibliothèque `html2pdf`.
 
 ---

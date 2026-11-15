@@ -4,6 +4,19 @@ Historique des versions livrées. Les dates correspondent aux commits du dépôt
 
 ---
 
+## 15 novembre 2026 — Remise en service complète (Supabase + GitHub Pages)
+
+- Création du projet Supabase `cod-team` (`pqnauwlwyrqftgywgoxi`, org `bghhtoeptsxaejfrttbk`, région `eu-west-3`), statut `ACTIVE_HEALTHY`.
+- Application de `bootstrap_full.sql` par CLI : **28 tables, 84 politiques RLS, 14 déclencheurs utilisateur, 58 wilayas, 10 réglages**, 28 tables publiées en Realtime.
+- Auth configurée : auto-confirmation e-mail active, `site_url` sur le fork publié, URL autorisées pour le fork, le dépôt canonique et le serveur local.
+- `index.html` rebranché sur `https://pqnauwlwyrqftgywgoxi.supabase.co` — **392 463 octets**, SHA-256 `9F3C86663C95E99F10E008A22AB9A126219D4B859D3D6590D7117CEB5E0648D3`.
+- Publication immédiate via le fork `chicluxuryy5-art/cod-team-app` et GitHub Pages : <https://chicluxuryy5-art.github.io/cod-team-app/> (HTTP 200).
+- Vérifications sur le site public : connexion admin, navigation complète, table Wilayas à **58 lignes**, Stock SKU et Tests A/B opérationnels.
+- Test réel d'inscription : rôle forcé `confirmatrice` ; interface limitée aux modules autorisés ; auto-promotion admin neutralisée par trigger.
+- Test d'isolation RLS : `comp_runs` en lecture = 0 ligne, écriture = 403 ; `products` = 403 ; `settings` inchangé ; `orders` création et mise à jour = 201/200.
+- Documentation actualisée : `README.md`, `DEPLOIEMENT_GITHUB.md`, `RECOVERY_SUPABASE.md`, `CHANGELOG.md`.
+- Reste à faire : fusion du fork dans `mrchiealgerie-hub/cod-team-app`, création des comptes réels, changement du mot de passe de test.
+
 ## 15 novembre 2026 — Protocole de test Twenty Cloud
 
 - Ajout de `TWENTY_CLOUD_TEST.md` : périmètre, protocole en 60–90 minutes, grille de décision sur 40 points.
